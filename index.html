@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForgeTracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <main class="main-box">
+        
+        <header class="top-summary">
+            <h1>Forge Tracker</h1>
+            <div class="stats-row">
+                <div class="stat-card">
+                    <span class="stat-title">Total Habits</span>
+                    <span id="total-habits" class="stat-num">0</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-title">Done Today</span>
+                    <span id="done-today" class="stat-num">0</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-title">Completion Rate</span>
+                    <span id="completion-rate" class="stat-num">0%</span>
+                </div>
+            </div>
+        </header>
+
+        <section class="form-box">
+            <div id="error-message" class="error-text" aria-live="polite"></div>
+
+            <form id="habit-form">
+                <div class="input-block">
+                    <label for="habit-name">Habit Name</label>
+                    <input type="text" id="habit-name" placeholder="e.g., Read for 20 mins">
+                </div>
+
+                <div class="split-inputs">
+                    <div class="input-block">
+                        <label for="habit-target">Target (Days per week)</label>
+                        <input type="number" id="habit-target" placeholder="1 - 7">
+                    </div>
+
+                    <div class="input-block">
+                        <label for="habit-category">Category</label>
+                        <select id="habit-category">
+                            <option value="">-- Choose Category --</option>
+                            <option value="Health">Health</option>
+                            <option value="Fitness">Fitness</option>
+                            <option value="Work">Work</option>
+                            <option value="Mind">Mind</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="save-button">Add New Habit</button>
+            </form>
+        </section>
+
+        <section class="list-box">
+            <h2>My Daily Streaks</h2>
+            <ul id="habit-list" class="all-habits"></ul>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
